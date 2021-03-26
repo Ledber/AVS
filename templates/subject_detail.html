@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ subject.s_name }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>{{ subject.s_name }}</h1>
+
+    <div class="alert alert-info">
+    <p>{{ subject.s_name }}</p>
+    <a href="/subject/{{ subject.id }}/del" class="btn btn-danger">Удалить</a>
+    </div>
+</div>
+
+{% endblock %}

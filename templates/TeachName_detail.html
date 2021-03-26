@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ teachName.t_name }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>{{ teachName.t_name }}</h1>
+
+    <div class="alert alert-info">
+    <p>{{ teachName.t_name }}</p>
+    <a href="/TeachName/{{ teachName.id }}/del" class="btn btn-danger">Удалить</a>
+    </div>
+</div>
+
+{% endblock %}

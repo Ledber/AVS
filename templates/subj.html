@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+Предметы
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<form action = "/Subject" method ="post">
+    <input type="text" name="subj" id="subj" class="form-control" placeholder="Добавить предмет"><br>
+    <input type="submit" class="btn btn-success" value="Добавить"><br>
+
+    <h1>Список предметов</h1>
+    <div class="card-group">
+    <div class="card-body">
+    {% for el in subjects %}
+
+    <div class="alert alert-dark mb-5 shadow-lg">
+        <h4>{{ el.s_name }}</h4>
+        <a href="/subject/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+    </div>
+    {% endfor %}
+
+        </div>
+    </div>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ teacher.name }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>{{ teacher.name }}</h1>
+
+    <div class="alert alert-info">
+    <p>{{ teacher.name }}</p>
+    <p>{{ teacher.subj }}</p>
+    <p><b>{{ teacher.day }}: {{teacher.time}}</b></p>
+    <a href="/teacher/{{ teacher.id }}/del" class="btn btn-danger">Удалить</a>
+    <a href="/teacher/{{ teacher.id }}/up" class="btn btn-success">Редактировать</a>
+    </div>
+    </div>
+</div>
+{% endblock %}
